@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".aop.AopActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clickShare"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:text="分享事件"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clickAudio"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:text="音频事件"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clickVideo"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:text="视频事件"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clickOther"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:text="其他事件"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
