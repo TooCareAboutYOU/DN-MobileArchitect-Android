@@ -9,13 +9,11 @@ package com.dn.mobile.architect.lsn5.db
 interface IBaseDao<T> {
     fun insert(entity: T): Long?
 
-//    fun update(entity: T, where: T): Long
-//
-//    fun delete(where: T): Int
+    fun update(entity: T, where: T): Long
+
+    fun delete(where: T): Int
 //
 //    fun query(where: T): List<T>
-//
 //    fun query(where: T, orderBy: String, startIndex: Int, limit: Int): List<T>
-//
 //    fun query(sql: String): List<T>
 }

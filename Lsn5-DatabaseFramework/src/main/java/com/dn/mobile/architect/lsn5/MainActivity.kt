@@ -20,4 +20,8 @@ class MainActivity : AppCompatActivity() {
         val result = dao?.insert(user)
         Log.i("print_logs", "MainActivity::insertObject: $result")
     }
+
+    fun deleteObject(view: View) {}
+    fun updateObject(view: View) {}
+    fun queryObject(view: View) {}
 }

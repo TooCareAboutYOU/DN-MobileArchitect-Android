@@ -12,4 +12,23 @@
         android:text="插入对象"
         android:onClick="insertObject" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="删除对象"
+        android:onClick="deleteObject" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改对象"
+        android:onClick="updateObject" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查询对象"
+        android:onClick="queryObject" />
+
 </androidx.appcompat.widget.LinearLayoutCompat>

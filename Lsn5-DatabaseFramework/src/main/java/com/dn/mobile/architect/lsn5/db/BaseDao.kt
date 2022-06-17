@@ -176,7 +176,11 @@ class BaseDao<T> : IBaseDao<T> {
 
     }
 
-    override fun insert(entity: T): Long? {
+    /**
+     * 添加数据
+     */
+    override
+    fun insert(entity: T): Long? {
         //准备好ContentValue中需要的数据
         val map = getValues(entity)
 
@@ -235,5 +239,57 @@ class BaseDao<T> : IBaseDao<T> {
         }
 
         return contentValues
+    }
+
+    /**
+     * 更新数据
+     */
+    override
+    fun update(entity: T, where: T): Long {
+        var result = -1L
+        //准备好ContentValue中需要的数据
+        val map = getValues(entity)
+        //数据转移到ContentValues中
+        val contentValues = mapToContentValues(map)
+
+        val whereCause = getValues(where) //key=_id, value=1
+        val condition = Condition(whereCause)
+
+
+        return result
+    }
+
+    private class Condition {
+        private var whereCause: String? = null
+        private var whereArgs: Array<String>? = null
+
+        constructor(whereCause: Map<String, String>) {
+            val list = ArrayList<String>()
+            val stringBuilder = StringBuilder()
+
+            //取到当前的表的字段名
+            val keySet: Set<String> = whereCause.keys
+            val iterator = keySet.iterator()
+            while (iterator.hasNext()) {
+                val key = iterator.next()
+                val value = whereCause[key]
+
+                if (!value.isNullOrEmpty()) {
+                    stringBuilder.append(" and ${key}=?")
+                }
+            }
+        }
+
+    }
+
+
+    /**
+     * 删除数据
+     */
+    override
+    fun delete(where: T): Int {
+        var result = -1
+
+        return result
     }
 }
